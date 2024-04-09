@@ -4,15 +4,14 @@
 #include<math.h>
 
 #define Employee struct emp
-//sohanuzzaman_soad
-void add(FILE * fp); //to add to list
-FILE * del(FILE * fp);//to delete from list
-void modify(FILE * fp);//to modify a record
-void displayList(FILE * fp);//display whole list
-void searchRecord(FILE *fp);//find a particular record
-void printChar(char ch,int n);//printing a character ch n times
+
+void add(FILE * fp); 
+FILE * del(FILE * fp);
+void modify(FILE * fp);
+void displayList(FILE * fp);
+void searchRecord(FILE *fp);
+void printChar(char ch,int n);
 void printHead();
-//sohanuzzaman_soad
 
 struct emp
 {
@@ -28,7 +27,7 @@ struct emp
     char phone[15];
     char mail[20];
 };
-//sohanuzzaman_soad
+
 
 int main()
 {
@@ -37,7 +36,7 @@ int main()
 int option;
 char another;
 
-if((fp=fopen("employeeInfo.txt","rb+"))==NULL) //sohanuzzaman_soad
+if((fp=fopen("employeeInfo.txt","rb+"))==NULL) 
 {
     if((fp=fopen("employeeInfo.txt","wb+"))==NULL)
        {
@@ -45,7 +44,7 @@ if((fp=fopen("employeeInfo.txt","rb+"))==NULL) //sohanuzzaman_soad
            return 0;
        }
 }
-char username[10],password[10]; //sohanuzzaman_soad
+char username[10],password[10]; 
 printHead();
 welcome();
 printHead();
@@ -102,7 +101,7 @@ if(((strcasecmp(username,"admin"))==0)&&((strcasecmp(password,"pass")==0)))
 
     printf("\n\n\t\tEnter Your Option :--> ");
     scanf("%d",&option);
-//sohanuzzaman_soad
+
     switch(option)
     {
         case 0: return 1;
@@ -138,7 +137,7 @@ if(((strcasecmp(username,"admin"))==0)&&((strcasecmp(password,"pass")==0)))
                   getch();
                   exit(0);
 
-    }//sohanuzzaman_soad
+    }
 }
 }
 else {
@@ -697,4 +696,3 @@ void otherbr(FILE * fp)
     printf("\n\n\t");
     system("pause");
 }
-//sohanuzzaman_soad
